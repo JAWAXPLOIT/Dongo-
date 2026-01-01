@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe Challenge</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background: #111; color: white; }
+        .container { max-width: 500px; margin: auto; padding: 20px; }
+        .board { display: grid; grid-template-columns: repeat(3, 100px); gap: 5px; margin: 20px auto; }
+        .cell { width: 100px; height: 100px; background: #333; border: 2px solid #555; font-size: 40px; cursor: pointer; }
+        .cell:hover { background: #444; }
+        #status { margin: 20px; font-size: 18px; }
+        #login { margin: 20px; }
+        input { padding: 10px; margin: 5px; }
+        button { padding: 10px 20px; background: #28a745; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 Tic Tac Toe Extreme</h1>
+        <p>Beat the AI to win $1000!</p>
+        
+        <div id="login">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="login()">Start Game</button>
+        </div>
+
+        <div id="game" style="display:none;">
+            <div class="board" id="board"></div>
+            <div id="status">You are X, AI is O</div>
+            <button onclick="resetGame()">Reset Game</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
